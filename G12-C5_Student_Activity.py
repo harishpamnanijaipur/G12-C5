@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Jun 21 11:22:49 2021
-
-@author: dell
-"""
-
 import pygame, random, sys, math
 
 pygame.init()
@@ -17,7 +10,6 @@ player_image = pygame.image.load("s4.png").convert_alpha()
 #Color or rectangle
 BLUE=(0,0,255)
 player=pygame.Rect(200,200,30,30)
-
 
 WHITE=(255,255,255)
 enemy=pygame.Rect(100,100,30,30)
@@ -76,17 +68,14 @@ while True:
     enemy.x+=evlx[i]
     
     enemy.y+=evly[i]
-    
-    
-    
-    if enemy.x < -250 or enemy.x > 650:# or enemy.y < -250 or enemy.y > 850:  
+      
+    if enemy.x < -250 or enemy.x > 650 or enemy.y < -250 or enemy.y > 850:  
       evlx[i] = -1*evlx[i]
       evly[i] = -1*evly[i]
       
     i+=1    
     screen.blit(enemy_image,enemy)  
-    
-    
+        
   if forward:
       player.x, player.y=newxy(player.x, player.y, distance, angle)  
  
@@ -98,13 +87,11 @@ while True:
    
   if enemy.x < -250 or enemy.x > 650 :
     xvel = -1*xvel
-    
-  
+      
   if enemy.y < -250 or enemy.y > 850:  
     yvel = -1*yvel
  
   screen.blit(newimg , player)
   
-
   pygame.display.update()
   clock.tick(30)
