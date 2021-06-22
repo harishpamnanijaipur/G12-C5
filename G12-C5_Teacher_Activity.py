@@ -75,13 +75,10 @@ while True:
       
     enemy.x+=evlx[i]
     
-    #enemy.y+=evly[i]
-    
-    
-    
-    if enemy.x < -250 or enemy.x > 650:# or enemy.y < -250 or enemy.y > 850:  
+       
+    if enemy.x < -250 or enemy.x > 650:
       evlx[i] = -1*evlx[i]
-      #evly[i] = -1*evly[i]
+    
       
     i+=1    
     screen.blit(enemy_image,enemy)  
