@@ -1,2 +1,9 @@
 colors=['caramel','gold','silver','occur']
 colors
+
+
+Q.4  John created a list of guests for his Birthday party. He created a list of 10 of his friends. Later on he wants to add 5 more friends to the guest list. Help him to write a proper code in python
+guestlist=[]
+
+For i in range(5):
+guestlist.append(“GuestName”)
