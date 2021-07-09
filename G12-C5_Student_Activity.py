@@ -17,11 +17,10 @@ player_image = pygame.image.load("s4.png").convert_alpha()
 
 
 #Color or rectangle
-BLUE=(0,0,255)
+
 player=pygame.Rect(200,200,30,30)
 
 
-WHITE=(255,255,255)
 enemy=pygame.Rect(100,100,30,30)
 enemy_image = pygame.image.load("e3.png").convert_alpha()
 
